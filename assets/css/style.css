@@ -94,7 +94,7 @@ body {
 
 /****** START FOOTER ******/
 #document {
-    height: 100vh;
+    height: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -134,7 +134,7 @@ footer > h1 {
     background-size: 55%;
     background-color: #fdfdfd;
     overflow: hidden;
-    padding: 100px 0;
+    padding: 10px 0;
 }
 
 .inner-container {
@@ -151,9 +151,9 @@ footer > h1 {
 }
 
 .text {
-    font-size: 13px;
+    font-size: 11px;
     color: #545454;
-    line-height: 30px;
+    line-height: 15px;
     text-align: justify;
     margin-bottom: 40px;
 }
