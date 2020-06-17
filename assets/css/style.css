@@ -16,6 +16,7 @@ body {
     background-image: linear-gradient(260deg, #E0BBE4 0%, #FBD2D7 100%);
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .main-nav {
@@ -54,42 +55,7 @@ body {
     display: block;
 }
 
-@media screen and (min-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 0;
-        height: 70px;
-        align-items: center;
-    }
 
-    .main-nav {
-        display: flex;
-        margin-right: 30px;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-
-    .main-nav li {
-        margin: 0;
-    }
-
-    .nav-links {
-        margin-left: 40px;
-    }
-
-    .logo {
-        margin-top: 0;
-    }
-
-    .navbar-toggle {
-        display: none;
-    }
-
-    .logo:hover, .nav-links:hover {
-        color: rgba(255, 255, 255, 1);
-    }
-}
 /******* END NAVBAR ******/
 
 /****** START FOOTER ******/
@@ -158,14 +124,100 @@ footer > h1 {
     padding: 0;
 }
 
-.skills {
+/*.skills {
     display: flex;
     justify-content: space-between;
     font-weight: 700;
     font-size: 13px;
-}
+}*/
 
-@media screen and (max-width:1200px) {
+
+/****** END ABOUT SECTION ******/
+
+/****** START GALLERY ******/
+.litho {
+    padding: 20px;
+    font-family: sans-serif;
+    background: #f2f2f2;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    margin-bottom: .5em;
+    font-family: 'Great Vibes', cursive;
+    font-size: 44px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
+  }
+  
+  .location-listing {
+    position: relative;
+  }
+  
+  .location-image {
+    line-height: 0;
+    overflow: hidden;
+  }
+  
+  .location-image img {
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+  }
+  
+  .location-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    background: rgba(224,187,228,0.4);
+    color: white;
+    
+    /* position the text in t’ middle*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .location-listing:hover .location-title {
+    opacity: 1;
+  }
+  
+  .location-listing:hover .location-image img {
+    filter: blur(2px);
+  }
+  
+  
+ /****** MEDIA QUERIES ******/
+  @media (hover: none) { 
+    .location-title {
+      opacity: 1;
+    }
+    .location-image img {
+      filter: blur(2px);
+    }
+  }
+
+  @media screen and (max-width:1200px) {
     .inner-container{
         padding: 80px;
     }
@@ -189,4 +241,40 @@ footer > h1 {
         padding: 60px;
     }
 }
-/****** END ABOUT SECTION ******/
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .main-nav li {
+        margin: 0;
+    }
+
+    .nav-links {
+        margin-left: 40px;
+    }
+
+    .logo {
+        margin-top: 0;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+
+    .logo:hover, .nav-links:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+}
